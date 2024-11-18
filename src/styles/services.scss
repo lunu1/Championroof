@@ -1,0 +1,173 @@
+.services-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // padding: 20px;
+    text-align: center;
+    width: 100vw;
+    margin-left: 3.3vw;
+    // background: #dadada;
+    margin: 0;
+    padding-top: 100px;
+    padding-bottom: 200px;
+    // border: 1px solid red;
+
+    
+      // --s: 50px; /* control the size*/
+      // --c1: #f7f7f7;
+      // --c2: #f0f0f0;
+      
+      // --g:conic-gradient(at 90% 40%,#0000 75%,var(--c1) 0);
+      // background: var(--g),var(--g) var(--s) var(--s) var(--c2);
+      // background-size: calc(2*var(--s)) calc(2*var(--s));
+    
+
+      --s: 7px; /* control the size*/
+      --c1: #ffffff;
+      --c2: #f2f2f2;
+   
+    background: 
+      linear-gradient(-26.56deg,var(--c1) 33%,var(--c2) 33.3% 66.6%,var(--c1) 67%) 
+      0/var(--s) var(--s);
+
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 900;
+      // text-decoration: underline;
+      margin: 0;
+      color: #084d84;
+
+    }
+    p{
+        margin:0;
+
+    }
+  
+    .services-description {
+    //   font-size: 1.2rem;
+      color: #666;
+      margin-bottom: 30px;
+      max-width: 70vw;
+      font-weight: 600;
+    }
+  
+    .services-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      width: 100%;
+      max-width: 1200px;
+    }
+  
+    .service-card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+  
+      .back-card {
+        position: absolute;
+        overflow-block: hidden;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #084d84;
+        border-radius: 10px;
+        z-index: 1; // Ensure the back card is behind the front card
+        transition: transform 0.3s ease; // Smooth transition for rotation
+      }
+  
+      .front-card {
+        position: relative;
+        width: 90%;
+        height: 90%;
+        background-color: #bbd5eb;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        z-index: 2; // Ensure the front card is above the back card
+        padding: 20px;
+        padding-top: 0;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        overflow: hidden;
+        
+
+
+        
+        // border: 3px solid #084d84;
+
+        button {
+          background:#084d84 ;
+          color: white;
+        }
+
+        
+
+
+//------------------
+
+
+
+/* CSS */
+
+
+
+
+//-------------
+        // filter: brightness(80%);
+
+        // img {
+        //     // height: 200px;
+        //     // width:200px;
+        //     object-fit: cover;
+        //     border: 1px solid red;
+        //     margin-top: 100px;
+        //     object-fit: cover;
+            
+        // }
+
+  
+        h3 {
+          font-size: 1.5rem;
+          // margin-bottom: 10px;
+          color: #084d84;
+          // background-color: #084d84;
+        }
+  
+        p {
+          color: #084d84;
+          padding: 0.5rem;
+
+        }
+      }
+  
+      &:hover .back-card {
+        transform: rotate(8deg); // Ensure back card rotates on hover
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .services-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .services-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+  

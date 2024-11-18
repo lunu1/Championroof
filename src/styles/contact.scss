@@ -1,0 +1,77 @@
+@import "../App.scss";
+
+.contact {
+  width: 70vw;
+  min-height: 27vh;
+  z-index: 999;
+  background-color: rgba(
+    218,
+    218,
+    218,
+    0.7
+  ); /* The last value (0.5) controls transparency */
+  border: 2px solid black;
+  margin-top: 6vh;
+  overflow: hidden;
+
+  // background: radial-gradient(#dedee1 15%, transparent 16%), repeating-linear-gradient(0deg, transparent 6.5%, #ffffff 7%, #ffffff 9%, transparent 10%), linear-gradient(45deg, transparent 49%, #dedee1 49%, #dedee1 51%, transparent 51%), linear-gradient(-45deg, transparent 49%, #dedee1 49%, #dedee1 51%, transparent 51%);
+  //       background-size: 3em 3em;
+  //       background-color: #ffffff;
+  //       opacity: 1;
+
+
+@include mobile {
+    margin-top: 80px;
+    width: 95vw;
+    height: 38vh;
+    margin-bottom: 10px;
+}
+  .contactcontent {
+    color: black;
+    margin-top: 40px;
+    text-align: center;
+
+    @include mobile {
+        margin-top: 20px;
+
+        h2 {
+            font-size: 16px;
+            font-weight: bolder;
+            margin-bottom: 20px;
+        }
+    }
+
+    .contactline {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2vh;
+
+      @include mobile {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      input {
+        min-height: 40px;
+        width: 18vw;
+        background: transparent;
+        border: 1px solid black;
+        color: black;
+        font-size: 18px;
+        padding-left: 10px;
+
+        @include mobile {
+           width:80vw ;
+           padding: 0 10px;
+        }
+      }
+      button {
+        background: #dadada;
+        border: 1px solid black;
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import "../App.scss";
+
+
+.workflow {
+    display: flex;
+    width: 99vw;
+    min-height: calc(100vh - 80px);
+    align-items: center;
+    justify-content: center;
+    background: #dadada;
+    margin-top: 50px;
+    flex-wrap: wrap;
+
+    @include mobile {
+        flex-direction:column-reverse;
+        margin-top: 80px;
+        // width: 100%;
+    }  
+    .stages {
+        width: 48.5vw;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        justify-content: flex-start; /* Changed to flex-start for natural scroll */
+        height: 80vh;
+        overflow-y: scroll; /* Ensures vertical scroll */
+        text-transform:uppercase;
+
+        @include mobile {
+            min-width: 100vw;
+        }
+        
+        .stagespoints {
+          min-height: 150px; /* Ensures that each point keeps a minimum height */
+          background: rgb(235, 233, 233);
+          border: 1px solid white;
+          border-radius: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative; /* Allows for absolute positioning */
+          padding: 20px; /* Adds padding for better layout */
+
+          .top-right, .bottom-left {
+            color: black; /* Default text color */
+            transition: color 0.3s; /* Smooth transition for text color */
+          }
+        
+          &:hover {
+            background-color: rgb(111, 108, 108); /* Change background to black on hover */
+            transition: all 0.5s;
+            
+            .top-right, .bottom-left {
+              color: white; /* Change text color to white on hover */
+            }
+          }
+        
+        
+          .top-right {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            color: black;
+            font-family: "Oswald", sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            font-style: normal;
+            word-spacing: 2px;
+            letter-spacing: 2px;
+            text-shadow: 20px;
+          }
+        
+          .bottom-left {
+            position: absolute;
+            bottom: 10px;
+            left: 20px;
+            color: black;
+            width: 400px;
+            font-size: 13px;
+          }
+        }
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* Internet Explorer 10+ */
+        
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, and Edge */
+        }
+      }
+      
+  
+    .stagesphoto {
+        position: relative;
+        background: rgb(235, 233, 233);
+        width: 45vw;
+        height: 80vh;
+        border-radius: 20px;
+        overflow: hidden;
+
+        @include mobile {
+            width: 99vw;
+        }
+    
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: 20px;
+          border: 1px solid white;
+        }
+    
+        .stage-text  {
+            position: absolute;
+            top: 50%;
+            left: 30%;
+          //   transform: translate(-50%, -50%);
+            font-size: 4rem;
+            font-weight: bold;
+            text-align: center;
+            z-index: 1;
+            font-family: "Oswald", sans-serif;
+          font-weight: 900;
+          color: rgb(111, 108, 108);
+          }
+
+          @include mobile {
+            // left: 10%;
+          }
+        
+        
+        .champion-text {
+          position: absolute;
+          top: 59%;
+          left: 55%;
+        //   transform: translate(-50%, -50%);
+          font-size: 2rem;
+          font-weight: 900;
+          color: white;
+          text-align: center;
+          z-index: 1;
+        }
+    
+        .champion-text {
+          font-size: 1.5rem;
+        }
+      }
+  }
+  

@@ -1,0 +1,108 @@
+@import "../App.scss";
+
+.contactus{
+    display: flex;
+    // margin-top: 10vh;
+    width: calc(100vw - 200px);
+    justify-content: space-around;
+    align-items: center;
+    padding:0 100px;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;     
+    overflow: hidden;
+    // border: 1px solid red;
+    // background-color: red;
+
+  --s: 110px; /* control the size*/
+  --c1: #f3f1f1;
+  --c2: #ffffff;
+  
+  --_g: radial-gradient(calc(var(--s)/2),var(--c1) 97%,#0000);
+  background:
+    var(--_g),var(--_g) calc(2*var(--s)) calc(2*var(--s)),
+    repeating-conic-gradient(from 45deg,#0000 0 25%,var(--c2) 0 50%) calc(-.707*var(--s)) calc(-.707*var(--s)),
+    repeating-linear-gradient(135deg,var(--c1) calc(var(--s)/-2) calc(var(--s)/2),var(--c2) 0 calc(2.328*var(--s)));
+  background-size: calc(4*var(--s)) calc(4*var(--s));
+
+
+    
+
+    h3 {
+        padding: 10px;
+        position: relative; /* Needed for the ::after to be positioned relative to the h3 */
+      
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px; /* Thickness of the border */
+          background: linear-gradient(to right, #084d84 50%, rgb(182, 178, 178) 50%);
+        }
+      }
+
+    p {
+        margin: 0;
+    }
+    
+.firstbox{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  flex-wrap: wrap;
+
+
+ @include mobile {
+  flex-direction: column;
+ }
+
+
+  .box {
+    height:50px;
+    // height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    padding: 100px 0;
+    padding-bottom: 0;
+    gap:10px;
+    // margin: 0;
+    // border: 1px solid red;
+
+    @include mobile {
+      // height: 20vh;
+      margin-top: 80px;
+      color:black;
+      margin-bottom: 30px;
+    }
+
+     
+  }
+
+  .socialmedia {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        margin-top: 3vh;
+
+        .circle {
+          width: 35px;
+          height: 35px;
+          border-radius: 50%;
+          background: #084d84;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          //   margin-top: 2vh;
+        }
+      }
+
+
+    }
+  }
